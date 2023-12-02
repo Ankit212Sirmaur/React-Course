@@ -18,7 +18,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // }
 
 // const a = 5+2;
-// const container = (
+// use paranthesis ()if you have to go in multiple line of code
+// and  curly {} used to write js expression like importing 
+// const container = ( 
 //   <div>
 //     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
 //     <h2 style={heading}>heading 2 is {a}</h2>
@@ -26,11 +28,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </div>
 // )
 
+let check = false;
 function myclock() {
   root.render(
     <div>
       <p>{new Date().toLocaleTimeString()}</p>
       <h2>heading 2</h2>
+      {/* 
+        it render only above because it changing every second some updation happend 
+        not heading 
+       */}
+       {/* conditional statement like to render  */}
+       <p> if it is true then have to render it {check ? "hi" : "bye  "} </p>
     </div>
   );
   setTimeout(myclock, 1000);

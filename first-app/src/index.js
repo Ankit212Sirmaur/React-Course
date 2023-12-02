@@ -28,27 +28,56 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </div>
 // )
 
-let check = false;
-function myclock() {
-  root.render(
-    <div>
-      <p>{new Date().toLocaleTimeString()}</p>
-      <h2>heading 2</h2>
-      {/* 
-        it render only above because it changing every second some updation happend 
-        not heading 
-       */}
-       {/* conditional statement like to render  */}
-       <p> if it is true then have to render it {check ? "hi" : "bye  "} </p>
-    </div>
-  );
-  setTimeout(myclock, 1000);
-}
+// let check = false;
+// function myclock() {
+//   root.render(
+//     <div>
+//       <p>{new Date().toLocaleTimeString()}</p>
+//       <h2>heading 2</h2>
+//       {/* 
+//         it render only above because it changing every second some updation happend 
+//         not heading 
+//        */}
+//        {/* conditional statement like to render  */}
+//        <p> if it is true then have to render it {check ? "hi" : "bye  "} </p>
+//     </div>
+//   );
+//   setTimeout(myclock, 1000);
+// }
 
-myclock();
+// myclock();
 
 // root.render(
 //   myclock
 // );
 
 
+
+function FirstComponent(){  // this is like custom component can be reuse many times
+  return(
+    <div>
+      <h1>heading 1</h1>
+      <p> Lorem, ipsum.</p>
+    </div>
+  );
+}
+
+function SecondComponet(){
+  return(
+    <div>
+      <p> Lorem ipsum dolor sit.
+      </p>
+    </div>
+  )
+}
+
+root.render(
+  <>
+  <FirstComponent/> 
+  <SecondComponet/>
+  
+  <FirstComponent/> 
+  <SecondComponet/>
+
+  </>
+);

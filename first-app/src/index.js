@@ -53,31 +53,38 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 
-function FirstComponent(){  // this is like custom component can be reuse many times
-  return(
-    <div>
-      <h1>heading 1</h1>
-      <p> Lorem, ipsum.</p>
-    </div>
-  );
-}
+// function FirstComponent(){  // this is like custom component can be reuse many times
+//   return(
+//     <div>
+//       <h1>heading 1</h1>
+//       <p> Lorem, ipsum.</p>
+//     </div>
+//   );
+// }
 
-function SecondComponet(){
-  return(
-    <div>
-      <p> Lorem ipsum dolor sit.
-      </p>
-    </div>
-  )
+// function SecondComponet(){
+//   return(
+//     <div>
+//       <p> Lorem ipsum dolor sit.
+//       </p>
+//     </div>
+//   )
+// }
+
+// class based component
+class Welcome extends React.Component{
+  render(){
+    return <h1> hello, </h1>
+  }
 }
 
 root.render(
   <>
-  <FirstComponent/> 
+  {/* <FirstComponent/> 
   <SecondComponet/>
   
   <FirstComponent/> 
-  <SecondComponet/>
+  <SecondComponet/> */}
 
   </>
 );

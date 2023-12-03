@@ -62,29 +62,52 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   );
 // }
 
-// function SecondComponet(){
-//   return(
-//     <div>
-//       <p> Lorem ipsum dolor sit.
-//       </p>
-//     </div>
-//   )
-// }
-
-// class based component
-class Welcome extends React.Component{
-  render(){
-    return <h1> hello, </h1>
-  }
+function SecondComponet(props) {
+  return (
+    <div>
+      <p> Lorem ipsum dolor sit and passing props is : {props.name}
+      <p> age is {props.age} and mail id : {props.email} </p>
+      </p>
+    </div>
+  )
 }
 
+// class based component
+// class Welcome extends React.Component {
+//   render() {
+//     return <h1> hello, </h1>
+//   }
+// }
+
+function Card({name, ...props}){
+  return (
+    <div>
+      <Avatar image = {props.image} />
+      <p> {name}</p> <hr />
+      <p> {props.age} </p>
+    </div>
+  )
+}
+
+function Avatar(props){
+  return(
+    <img src= {props.image} alt= {props.name} />
+  )
+}
+
+const myankit = 'kumar';
 root.render(
   <>
-  {/* <FirstComponent/> 
+    {/* <FirstComponent/> 
   <SecondComponet/>
   
   <FirstComponent/> 
   <SecondComponet/> */}
 
+    {/* <SecondComponet name = 'ankit'/>
+    <SecondComponet name = {myankit}/>
+
+    <SecondComponet age = '21' email = 'ankit12@gmail.com'/>  */}
+    <Card name = "ankit" age = "21" image = 'https://via.placeholder.com/200'/>
   </>
 );

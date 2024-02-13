@@ -2,8 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+// import { BrowserRouter } from 'react-router-dom';
+
+import { Provider } from 'react-redux'; // Correct import
+import store from './component/ReactRedux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
+
 // const heading = <h1>heading 1</h1>
 // const container = <div>
 //   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, eius.</p>
@@ -62,15 +75,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   );
 // }
 
-function SecondComponet(props) {
-  return (
-    <div>
-      <p> Lorem ipsum dolor sit and passing props is : {props.name}
-      <p> age is {props.age} and mail id : {props.email} </p>
-      </p>
-    </div>
-  )
-}
+// function SecondComponet(props) {
+//   return (
+//     <div>
+//       <p> Lorem ipsum dolor sit and passing props is : {props.name}
+//       <p> age is {props.age} and mail id : {props.email} </p>
+//       </p>
+//     </div>
+//   )
+// }
 
 // class based component
 // class Welcome extends React.Component {
@@ -79,35 +92,37 @@ function SecondComponet(props) {
 //   }
 // }
 
-function Card({name, ...props}){
-  return (
-    <div>
-      <Avatar image = {props.image} />
-      <p> {name}</p> <hr />
-      <p> {props.age} </p>
-    </div>
-  )
-}
+// function Card({name, ...props}){
+//   return (
+//     <div>
+//       <Avatar image = {props.image} />
+//       <p> {name}</p> <hr />
+//       <p> {props.age} </p>
+//     </div>
+//   )
+// }
 
-function Avatar(props){
-  return(
-    <img src= {props.image} alt= {props.name} />
-  )
-}
+// function Avatar(props){
+//   return(
+//     <img src= {props.image} alt= {props.name} />
+//   )
+// }
 
-const myankit = 'kumar';
-root.render(
-  <>
-    {/* <FirstComponent/> 
-  <SecondComponet/>
+// const myankit = 'kumar';
+// root.render(
+//   <>
+//     {/* <FirstComponent/> 
+//   <SecondComponet/>
   
-  <FirstComponent/> 
-  <SecondComponet/> */}
+//   <FirstComponent/> 
+//   <SecondComponet/> */}
 
-    {/* <SecondComponet name = 'ankit'/>
-    <SecondComponet name = {myankit}/>
+//     {/* <SecondComponet name = 'ankit'/>
+//     <SecondComponet name = {myankit}/>
 
-    <SecondComponet age = '21' email = 'ankit12@gmail.com'/>  */}
-    <Card name = "ankit" age = "21" image = 'https://via.placeholder.com/200'/>
-  </>
-);
+//     <SecondComponet age = '21' email = 'ankit12@gmail.com'/>  */}
+//     <Card name = "ankit" age = "21" image = 'https://via.placeholder.com/200'/>
+//   </>
+// );
+
+

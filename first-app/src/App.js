@@ -1,10 +1,14 @@
 // import { useState } from 'react';
 import './App.css';
+// import CreateNote from './component/ReactRedux/component/createNote';
+// import ListNotes from './component/ReactRedux/component/listNotes';
+import NavBar from './component/Redux-app/NavBar';
+import Productlist from './component/Redux-app/Productlist';
 // import MakingRoutes from './component/router and Navigation/MakingRoutes';
 // import DoSome from './component/Form/DoSome';
 // import Counter from './component/Counter';
-import Child1 from './component/ReactRedux/component/Child1';
-import Child2 from './component/ReactRedux/component/Child2';
+// import Child1 from './component/ReactRedux/component/Child1';
+// import Child2 from './component/ReactRedux/component/Child2';
 // import Fruit from './component/Fruit';
 // import InputFruit from './component/InputFruit';
 // import Notes from './component/Notes';
@@ -18,15 +22,15 @@ import Child2 from './component/ReactRedux/component/Child2';
 
 
 function App() {
-  // const [countinParent, setcountinParent] = useState(0);
-  
-  // function updatecountUpdate(count){
-  //   setcountinParent(count);
-  // }
+
   return (
     <div className="App">
-      <Child1/>
-      <Child2/>
+      <NavBar />
+      <Productlist />
+      {/* <CreateNote/>
+      <ListNotes/> */}
+      {/* <Child1/>
+      <Child2/> */}
       {/* <Counter/> */}
       {/* <Fruit/> */}
       {/* <InputFruit/> */}

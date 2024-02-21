@@ -1,0 +1,15 @@
+nav{
+    background-color: darkolivegreen;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    align-items: center;
+    color: white;
+}
+
+.cart-layout{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}

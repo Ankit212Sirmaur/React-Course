@@ -1,0 +1,27 @@
+.SingleProduct{
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+.productImg{
+    width: 100%;
+}
+.productinfo{
+    padding: 10px;
+}
+.cartInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+}
+.button{
+    padding: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
